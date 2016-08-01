@@ -18,7 +18,7 @@ namespace TrafBot.Dialogs
     public class DialogsSMS : LuisDialog<object>
     {
         string[] imgUrl = { "https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%200010A&time=1469440518926"
-                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20052%20Fixed&time=1469526111509"
+                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20014&time=1469794433388"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20003&time=1469515338615"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20035&time=1469515018541"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20016&time=1469440802920"
@@ -28,7 +28,7 @@ namespace TrafBot.Dialogs
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N3%20106&time=1469441145981"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20001"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20019"
-                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20039&time=1469451064936"
+                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=WC&deviceID=WC%20CCTV%20N2%20212&time=1469794576184"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20034&time=1469514757520"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20051&time=1469514717511"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N3%20125&time=1469454307901"
@@ -41,19 +41,24 @@ namespace TrafBot.Dialogs
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N3%200211b&time=1469524983512"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N3%20122&time=1469525063610"
                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N3%20105&time=1469525165529"
-                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N3%20107&time=1469525186516"};
+                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=WC&deviceID=WC%20CCTV%20N2%20225&time=1469794536169"
+                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20023&time=1469794861168"
+                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20049&time=1469794961178"
+                             ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20006&time=1469795024182"
+                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20015"
+                            ,"https://www.i-traffic.co.za/CctvImageHandler.ashx?networkID=KZN&deviceID=KZN%20CCTV%20N2%20038&time=1469795106178"};
         string[] descp = { "N2 near Kenyon Howden bridge",
-                           "N2 at Port Shepston",
+                           "N2 before Sarnia Rd I/C ",
                            "N2 at Umlazi off-ramp ",
-                           " N2 near Sunningdale/KwaMashu"
+                           "N2 near Sunningdale/KwaMashu"
                             , "N2 before Edwin Swales Drive Northbound",
-                          " N2 at Queen Nandi Drive (M45)",
-                        "N2 at Cloete Interchange North",
-                        "N2 near Sunningdale/KwaMashu",
-                        "N3 before St James Av Southbound",
-                        "N2 before Prospecton Rd I/C",
+                            " N2 at Queen Nandi Drive (M45)",
+                           "N2 at Cloete Interchange North",
+                           "N2 near Sunningdale/KwaMashu",
+                           "N3 before St James Av Southbound",
+                           "N2 before Prospecton Rd I/C",
                         "N2 at Ridge View",
-                        "N2 at Umhlanga Interchange",
+                        "N2 OB at Modderdam",
                         " N2 at KwaMashu Highway (R102)",
                         "N2 at Watson Highway (M43)",
                         "N3 Before Marianhill Toll plaza"
@@ -66,7 +71,13 @@ namespace TrafBot.Dialogs
                         "N3 after Market Rd ",
                         "N3 at Stockville/Mahogany Ridge I/C"
                         ,"N3 at Spine Rd (Pavilion I/C) ",
-                        "N3 before Spine Rd Southbound" };
+                        "N2 OB before Baden Powell",
+                        "N2 at Jan Smuts Highway (M13) "
+                        ,"N2 at King Shaka Airport "
+                        ,"N2 at Hull Rd"
+                        ,"N2 at Sarnia Rd & Railway bridge"
+                        ,"N2 at Somerset Park"
+                        };
 
 
         [LuisIntent("")]
@@ -80,8 +91,8 @@ namespace TrafBot.Dialogs
         [LuisIntent("intent.trafbots.help")]
         public async Task help(IDialogContext context, LuisResult result)
         {
-            string message = $"__Supported commands and Tips__ \r\n\r\n  Use words such as show and get when acquiring informations for__example__ [ * show current incidents in kwazulu Natal * ] \r\n\r\n " +
-                            "For searching travel times : __TM:street name__ \r\n\r\n for searching images of roads : __IMG: road name__";
+            string message = $"__Supported commands and Tips__ \r\n\r\n  Use words such as show and get when acquiring information for__example__ [ * show current incidents in kwazulu Natal roads* ] \r\n\r\n " +
+                            "For searching travel times : __TM:street name__  [TM:anton lembede]\r\n\r\n for searching images of roads : __IMG: road name__ [IMG:N2 at Umlazi]";
             await context.PostAsync(message);
             context.Wait(MessageReceived);
         }
@@ -93,7 +104,6 @@ namespace TrafBot.Dialogs
             string message = $"Your SMS message was successfully sent";
             await context.PostAsync(message);
             context.Wait(MessageReceived);
-            
         }
 
         [LuisIntent("intent.trafbots.start")]
@@ -117,65 +127,11 @@ namespace TrafBot.Dialogs
         [LuisIntent("intent.trafbots.gettraffic")]
         public async Task traffic(IDialogContext context, LuisResult result)
         {
-            string incidents="";
-            using (var client = new HttpClient())
-            {
-                var url = $"https://www.i-traffic.co.za/Feeds.ashx?type=roadconditions&region=KZN";
-                //Substring(res.IndexOf("{"), res.LastIndexOf
-                var response = client.GetAsync(url).Result;
-                var res = response.Content.ReadAsStringAsync().Result;
-                XmlDocument doc = new XmlDocument();
-                doc.LoadXml(res);
-                var json = JsonConvert.SerializeXmlNode(doc).ToString();
-                
-
-                try
-                {
-                    var output = JsonConvert.DeserializeObject<results>(json);
-
-                    int count = output.rss.channel.item.Count;
-
-                    incidents = "### The following roads currently have traffic:";
-
-                    for (int i = 0; i < count; i++)
-                    {
-                        incidents += "\r\n\r\n + " + output.rss.channel.item[i].title + "\r\n\r\n >" + output.rss.channel.item[i].pubDate + "\r\n\r\n" + "=======================";
-
-                    }
-                    string message = $"{incidents}";
-                    await context.PostAsync(message);
-                    context.Wait(MessageReceived);
-                    
-                }
-                catch (Exception)
-                {
-                    try
-                    {
-                        var output = JsonConvert.DeserializeObject<resultsItem>(json);
-
-                        incidents = "### The following road currently has traffic:";
-
-                        incidents += "\r\n\r\n + " + output.rss.channel.item.title + "\r\n\r\n > " + output.rss.channel.item.pubDate + "\r\n\r\n" + "=======================";
-
-                        string message = $"{incidents}";
-                        await context.PostAsync(message);
-                        context.Wait(MessageReceived);
-                    }
-                    catch (Exception)
-                    {
-                        incidents = "Its a great day for drivers, roads are free of traffic";
-
-                        string message = $"{incidents}";
-                        await context.PostAsync(message);
-                        context.Wait(MessageReceived);
-                    }
-                    
-                }
-                
-                
-            }
-
             
+            string message = $"Thanks for using __traftrac__";
+            await context.PostAsync(message);
+            context.Wait(MessageReceived);
+                    
         }
 
 
@@ -372,7 +328,7 @@ namespace TrafBot.Dialogs
                     
                     var url = "";
 
-                    for (int i = 0; i < 25; i++)
+                    for (int i = 0; i < 30; i++)
                     {
                         url += "![" + descp[i] + "](" + imgUrl[i] + ")";
                     }
@@ -416,8 +372,9 @@ namespace TrafBot.Dialogs
 
                     int count = output.rss.channel.item.Count;
 
-                    incidents = "## These current travel times in kwazulu natal :";
-                    string road = result.Query.Substring(result.Query.IndexOf(':')+1);
+                    string road = result.Query.Substring(result.Query.IndexOf(':') + 1);
+                    incidents = "### Current travel times in:  "+road;
+                    
                     Boolean flag = false;
 
                     for (int i = 0; i < count; i++)
@@ -499,7 +456,7 @@ namespace TrafBot.Dialogs
         public async Task streetMap(IDialogContext context, LuisResult result)
         {
             var url = "";
-            url += "![Street map](http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/-29.8055147,31.0321718/12?mapSize=500,500&pp=47.620495,-122.34931;21;AA&pp=47.619385,-122.351485;;AB&pp=47.616295,-122.3556;22&key=eU3Lwcd55cVoQNXl7BDO~4madrK6kjWBwZpCjZEO_0w~AvBFlIQ-raRU8ss_bAWWOBacA2EjnxY-1ebUAgDxLDAHOP0WUS9zjzsvnex0-upv)";
+            url += "![Street map](http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/-29.7367,31.0703/16?&dcl=1&key=eU3Lwcd55cVoQNXl7BDO~4madrK6kjWBwZpCjZEO_0w~AvBFlIQ-raRU8ss_bAWWOBacA2EjnxY-1ebUAgDxLDAHOP0WUS9zjzsvnex0-upv)";
             string message = $"{url}";
             await context.PostAsync(message);
             context.Wait(MessageReceived);
@@ -524,7 +481,7 @@ namespace TrafBot.Dialogs
                 {
                     lat = coord.Latitude.ToString();
                     longi = coord.Longitude.ToString();
-                    var url = "![Testing](https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+longi+"&zoom=15&size=400x400&key)";
+                    var url = "![Testing](https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+longi+ "&zoom=15&size=400x400&markers=color:red%7Clabel:C%7C"+lat+","+longi+"&key)";
                     message = $"{url}";
                     await context.PostAsync(message);
                     context.Wait(MessageReceived);
